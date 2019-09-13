@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang='en'>
 
-<head>
+  <head>
 
     <title>Jane Yeh</title>
     <meta charset='utf-8'>
@@ -10,36 +9,41 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <style>
-        .container {
-            width: 500px;
-            margin: auto;
-            text-align: center;
-        }
+      .container {
+        width: 500px;
+        margin: auto;
+        text-align: center;
+      }
 
-        img {
-            width: 500px;
-        }
+      img {
+        width: 500px;
+      }
+
     </style>
 
-</head>
+  </head>
 
-<body>
+  <body>
 
     <div class='container'>
 
-        <h1>Jane Yeh</h1>
+      <h1>Jane Yeh</h1>
 
-        <img src='images/photo.jpg' alt='Photo of Jane Yeh'>
+      <img src='images/photo.jpg' alt='Photo of Jane Yeh'>
 
-        <h2>About Me</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in pulvinar libero. Pellentesque habitant morbi 
-tristique senectus et netus et malesuada fames ac turpis egestas.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in pulvinar libero. Pellentesque habitant morbi 
-tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
+      <h2>About Me</h2>
+      <p>
+        Hello, my name is Jane Yeh and I am from Queens, New York. This is my 3rd semester at HES and am looking forward
+        to earning my masters in Information Management system. I will have 3 more courses including the capstone to take after 
+this
+        semester. I have 3 dogs, one is a 4 year old Coton du Tulear named Jarvis and 2 Schnauzer/Yorkie mix I rescued several 
+weeks ago
+        named Jello and Jalapeno (Halle for short).They turned 4 months last week (teething stage) and have recently discovered my 
+shoe
+        closet. Ouch!
+      </p>
 
     </div>
-</body>
+  </body>
 
 </html>
