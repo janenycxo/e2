@@ -22,6 +22,7 @@
     <h3>Results</h3>
     This game is played by throwing out these hand signs.
     On the count of three, or by chanting rock/paper/scissor all hands must be thrown in unison every single time to avoid room for error.
+    If both players throw the same sign, repeat until one wins.
     
 </body>
 
