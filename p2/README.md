@@ -1,9 +1,9 @@
 # Project 2
 + By: *Jane Yeh*
-+ Production URL: <http://p2.janenycxo.com>
++ Production URL: <http://p2.janenycxo.me>
 
 ## Game planning
-Tic Tac Toe
+Rock/Paper/Scissors Multiplayer Game
 
 ## Outside resources
 n/a
