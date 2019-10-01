@@ -1,13 +1,22 @@
-  <!doctype html>
-  <html lang='en'>
+<?php require 'index-controller.php'; ?>
+<!doctype html>
+<html lang='en'>
 
-    <head>
-      <title>Project 2</title>
-      <meta charset='utf-8'>
-    </head>
+<head>
+  
+    <title>Project 2 Multiplayer Game</title>
+    <meta charset='utf-8'>
+  
+</head>
 
-    <body>
-      <h1>Project 2 Multiplayer Tic Tac Toe Game</h1>
-    </body>
+<body>
 
-  </html>
+    <h1>Tic Tac Toe</h1>
+
+    <h2>Mechanics</h2>
+    
+    <h3>Results</h3>
+    
+</body>
+
+</html>
