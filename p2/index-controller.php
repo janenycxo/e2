@@ -10,10 +10,10 @@
 */
 
 //outcome
-$result =null;
+$result = null;
 
 //Possible Moves
-$throws ={'ROCK', 'PAPER', 'SCISSORS'};
+$throws = ['ROCK', 'PAPER', 'SCISSORS'];
 
 //Random selection from players  
 $player1throw = $throws [rand (0,2)];
