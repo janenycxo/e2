@@ -1,5 +1,5 @@
 <?php
-
+ 
 /*
 *RULES FOR TIC-TAC-TOE
 *1. This is a multi-player game. 

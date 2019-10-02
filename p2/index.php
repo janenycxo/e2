@@ -24,6 +24,13 @@
     On the count of three, or by chanting rock/paper/scissor all hands must be thrown in unison every single time to avoid room for error.
     If both players throw the same sign, repeat until one wins.
     
+    <ul>
+        <li>Player 1 throws SCISSORS sign <?php echo $player1throw; ?></li>
+        <li>Player 2 throws PAPER sign <?php echo $player2throw; ?></li>
+        <li>Which player threw the winning sign <?php echo $throw; ?></li>
+        <li>The winner is <?php echo $winner; ?></li>
+    </ul>
+
 </body>
 
 </html>
