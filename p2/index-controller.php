@@ -37,3 +37,4 @@ if ($player1throw == 'SCISSORS' and $player2throw == 'PAPER') {
     $result = 'Congrats Player 1! You are the Winner.';
 } elseif ($player1throw =='PAPER' and $player2throw == 'SCISSORS') {
     $result = 'Congrats Player 2! You are the Winner.';
+ 

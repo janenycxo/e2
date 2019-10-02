@@ -52,10 +52,6 @@
 =======
         to earning my masters in Information Management system. I will have 3 more courses including the capstone to take after 
 this semester.
-        <br> I have 3 dogs, one is a 4 year old Coton du Tulear named Jarvis and 2 Schnauzer/Yorkie mix I rescued several weeks ago 
-named Jello-saurus and Jalapeno (Halle for short).They turned 4 1/2 months (teething stage) and have recently discovered my shoe 
-closet.
->>>>>>> f2edd62c1d6fcf13d8f0d3fe495aea3899ced72b
         <br> C'est la vie, Ouch!
       </p>
 

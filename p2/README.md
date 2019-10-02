@@ -15,4 +15,3 @@
 
 ## Outside resources
 n/a
- 
