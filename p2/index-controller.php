@@ -10,7 +10,7 @@
 */
 
 //outcome
-$result = null;
+$winner = null;
 
 //Possible Moves
 $throws = ['ROCK', 'PAPER', 'SCISSORS'];
@@ -20,21 +20,21 @@ $player1throw = $throws [rand (0,2)];
 $player2throw = $throws [rand (0,2)];
 
 if ($player1throw == 'SCISSORS' and $player2throw == 'PAPER') {
-    $result = 'Congrats Player 1! You are the Winner.';
+    $winner = 'Congrats Player 1! You are the Winner.';
 } elseif ($player1throw =='SCISSORS' and $player2throw == 'ROCK') {
-    $result = 'Congrats Player 2! You are the Winner.';
+    $winner = 'Congrats Player 2! You are the Winner.';
 } elseif ($player1throw =='SCISSORS' and $player2throw == 'SCISSORS') {
-    $result = 'Scratch, keep playing!';
+    $winner = 'Scratch, keep playing!';
 } elseif ($player1throw =='ROCK' and $player2throw == 'PAPER') {
-    $result = 'Congrats Player 2! You are the Winner.';
+    $winner = 'Congrats Player 2! You are the Winner.';
 } elseif ($player1throw =='ROCK' and $player2throw == 'ROCK') {
-    $result = 'Scratch, keep playing!';
+    $winner = 'Scratch, keep playing!';
 } elseif ($player1throw =='ROCK' and $player2throw == 'SCISSORS') {
-    $result = 'Congrats Player 1! You are the Winner.';
+    $winner = 'Congrats Player 1! You are the Winner.';
 } elseif ($player1throw =='PAPER' and $player2throw == 'PAPER') {
-    $result = 'Scratch, keep playing!';
+    $winner = 'Scratch, keep playing!';
 } elseif ($player1throw =='PAPER' and $player2throw == 'ROCK') {
-    $result = 'Congrats Player 1! You are the Winner.';
+    $winner = 'Congrats Player 1! You are the Winner.';
 } elseif ($player1throw =='PAPER' and $player2throw == 'SCISSORS') {
-    $result = 'Congrats Player 2! You are the Winner.';
+    $winner = 'Congrats Player 2! You are the Winner.';
  

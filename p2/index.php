@@ -1,3 +1,4 @@
+<?php require 'index-controller.php'; ?>
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -17,19 +18,18 @@
     The rules of the game is pretty simple. There are three shapes thrown by hand.
     ROCK is when you hold your hand in a fist. PAPER is when you hold your hand out in the high five sign. SCISSORS is when you position your pointer and middle finger in a peace sign.
     ROCK beats SCISSORS, SCISSORS beat PAPER, and PAPER beats ROCK.
-
-    <h3>Results</h3>
     This game is played by throwing out these hand signs.
     On the count of three, or by chanting rock/paper/scissor all hands must be thrown in unison every single time to avoid room for error.
     If both players throw the same sign, repeat until one wins.
-    
+
+    <h3>Results</h3>
+       
     <ul>
-        <li>Player 1 throws SCISSORS sign <?php echo $player1throw; ?></li>
-        <li>Player 2 throws PAPER sign <?php echo $player2throw; ?></li>
-        <li>Which player threw the winning sign <?php echo $throw; ?></li>
+        <li>Player 1 throws <?php echo $player1throw; ?></li>
+        <li>Player 2 throws <?php echo $player2throw; ?></li>
         <li>The winner is <?php echo $winner; ?></li>
     </ul>
-
+  
 </body>
 
 </html>
