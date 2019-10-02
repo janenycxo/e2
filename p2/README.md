@@ -14,4 +14,6 @@
 + On the count of three, or by chanting rock/paper/scissor all hands must be thrown in unison every single time to avoid room for error. No slow throwing allowed.
 
 ## Outside resources
-n/a
+Testing out codes at https://jsfiddle.net/tzkymjb4/
+Html Validator https://validator.w3.org/nu/  
+php Syntax check https://phpcodechecker.com/ 
