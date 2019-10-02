@@ -47,7 +47,7 @@
     <ul>
       <li>Player 1 throws <?php echo $player1throw; ?></li>
       <li>Player 2 throws <?php echo $player2throw; ?></li>
-      <li>The <strong>Winner</strong> is<?php echo $winner; ?></li>
+      <li>The <strong>Winner</strong> is <?php echo $winner; ?></li>
     </ul>
 
   </body>
