@@ -24,10 +24,10 @@
   <body>
 
     <h1>Select between the 2 Dog Breeds to begin your agility training.</h1>
-    Agility training teaches your dog to navigate obstacles, such as weave through poles, negotiate tunnels, high and long jumps and balance on see-saws.
-    Certain breeds excel at agility, while others struggle. However, all dogs can benefit from some type of obedience training.
-    The computer chooses between the 2 dog breeds, and the player who selects the correct breed wins.
-    It is a random selection game.
+    <h2>Agility training teaches your dog to navigate obstacles, such as weave through poles, negotiate tunnels, high and long jumps and balance on see-saws.
+    <br>Certain breeds excel at agility, while others struggle. However, all dogs can benefit from some type of obedience training.
+    <br>The computer chooses between the 2 dog breeds, and the player who selects the correct breed wins.
+    <br>It is a random selection game.</h2>
 
     <br><br>
     <h3>Rules for this game</h3>
@@ -68,13 +68,7 @@
     </form>
 
 
-    <h2>Results</h2>
-    <ul>
-
-      <li>Player 1 chooses <?php echo $player1choice; ?></li>
-      <li>Player 2 chooses <?php echo $player2choice; ?></li>
-      <li>The <strong>Winner</strong> is <?php echo $winner; ?></li>
-    </ul>
+    
 
   </body>
 

@@ -1,8 +1,10 @@
 <?php
 
-if ($_GET['answer'] == 'Labrador Retriever'){
+session_start();
+
+if ($_POST['answer'] == 'Labrador Retriever'){
     $correct = 'true';
 } else {
-    $correct = 'false';
-    }
-    
+    $results = 'Incorrect';
+}
+
