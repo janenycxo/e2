@@ -9,8 +9,6 @@ if (isset($_SESSION['results'])){
     $showResults = false;
 }
 
-<?php
-
 //OUTCOME
 $winner = null;
 

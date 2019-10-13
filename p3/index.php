@@ -78,7 +78,6 @@ facts about dog breeds.</li>
 AKC </a> for more interesting facts about dog breeds.</li>
         <?php } ?>
     </ul>       
-    <?php } ?>
     
 </body>
 
