@@ -1,13 +1,13 @@
 <?php
 
 session_start();
-
-if ($_POST['answer'] == 'Labrador Retriever'){
-    $correct = 'true';
+if (isset($_SESSION['results'])){
+    $_results = $_SESSION['results'];
+    $showResults = true;
+    $_SESSION['results'] = null;
 } else {
-    $results = 'Incorrect';
+    $showResults = false;
 }
-
 
 <?php
 
