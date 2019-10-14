@@ -57,7 +57,7 @@ wins.
           <input type='radio' id='Labrador Retriever' name='dogBreed' value='Labrador Retriever'>
           <label for='dogBreed'> Labrador Retriever</label>
         </div>
-        <input type='radio' id='German Shepherd' name='team' value='German Shepherd'>
+        <input type='radio' id='German Shepherd' name='dogBreed' value='German Shepherd'>
         <label for='dogBreed'> German Shepherd</label>
 
         <div>
@@ -67,7 +67,16 @@ wins.
       </form>
    
       <h2>Conclusion</h2>
-    <ul>
+
+<?php if($showResults) { ?>
+<?php if ($results) { ?>
+Hooray! Let's begin our Agility training with your dog.
+<?php } else { ?>
+Sorry, you do not have a dog to train right now. :(
+<?php } ?>
+<?php } ?>  
+
+   <ul>
         <li>The Dog breed you chose to begin agility training is:
         <?php echo $results['playerchoice']; ?></li>
 
