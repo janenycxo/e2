@@ -2,9 +2,8 @@
 
 session_start();
 
-<?php
-session_start();
 $winner = null;
+
 $dogBreed = ['Labrador Retriever', 'German Shepherd'];
 $breed = $_GET['breed'];
 
@@ -15,11 +14,13 @@ if ($breed == $player1choice) {
 } else {
     $winner = false;
 }
+
 $results = [
     'winner' => $winner,
     'player1choice' => $player1choice,
     'breed' => $breed,
 ];
+
 $_SESSION['results'] = $results;
 
 header('Location: index.php');
