@@ -44,13 +44,6 @@ wins.
     <br><br><br>    
        
 <form method='GET' action='process.php'>
-      <fieldset>
-        <legend>Please complete:</legend>
-        <div>
-          <label for='name'>Name</label>
-          <input type='text' id='name' name='name'> 
-        </div>
-
         <br>
         <p>Choose the Dog Breed you would like to begin your agility training:</p>
         <div>
