@@ -4,12 +4,6 @@
 
 <head>
 
-<title></title>
-<meta charset='utf-8'>
-
-</head>
-<body>
-
 <form method='GET' action='process.php'>
     <h1>Word Scramble</h1>
 
@@ -22,13 +16,21 @@
     <button type='submit'>Check answer</button>
 </form>
 
-<?php if($showResults) { ?>
-<?php if ($results) { ?>
-Hooray! Let's begin our Agility training with your dog.
-<?php } else { ?>
-Sorry, you do not have a dog to train right now. :(
-<?php } ?>
-<?php } ?>  
+<?php
+var_dump($_GET);
+var_dump($_GET['answer']);
+
+if($_GET['answer'] == '') {
+    var_dump('You didn’t enter a guess');
+}
+else if($_GET['answer'] == 'pumpkin') {
+    var_dump('Correct!');
+}
+else {
+    var_dump('Incorrect');
+}
+ 
 
 </body>
+
 </html>

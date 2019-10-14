@@ -48,12 +48,12 @@ wins.
         <p>Choose the Dog Breed you would like to begin your agility training:</p>
         <div>
         
-        <input type='radio' name='dogBreed' id='Labrador Retriever'>
+        <input type='radio' name='dogBreed' id='dogBreed'>
         <label for='dogBreed'> Labrador Retriever</label>
         </div>
         <div>
         
-        <input type='radio' name='dogBreed' id='German Shepherd'>
+        <input type='radio' name='dogBreed' id='dogBreed'>
         <label for='dogBreed'> German Shepherd</label>
         <div>
           <button type='submit'>Woof!</button>
@@ -63,7 +63,7 @@ wins.
 
 
 <?php if($showResults) { ?>
-<?php if ($results) { ?>
+<?php if ($correct) { ?>
 Hooray! Let's begin our Agility training with your dog.
 <?php } else { ?>
 Sorry, you do not have a dog to train right now. :(

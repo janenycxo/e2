@@ -1,14 +1,13 @@
 <?php
 
-
 session_start();
 
-if ($_GET['dogBreed'] == 'dogBreed') {
+if ($_GET['answer'] == 'pumpkin') {
     $correct = true;
 } else {
     $correct = false;
 }
 
-$_SESSION['results'] = $results;
+$_SESSION['correct'] = $correct;
 
 header('Location: index.php');

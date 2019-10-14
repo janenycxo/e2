@@ -69,29 +69,17 @@ wins.
       <h2>Conclusion</h2>
 
 <?php if($showResults) { ?>
-<?php if ($results) { ?>
-Hooray! Let's begin our Agility training with your dog.
+	<ul>
+		<li>The dog breed you chose to begin agility training is: <?php echo 
+$results['playerchoice']; ?>
+	        <li>The dog breed the other player chose is: <?php echo $results['breed']; ?></li>
+<?php if ($results['winner'])  {?> You won! Visit <a href="https://www.akc.org"> AKC </a> for more interesting facts about dog 
+		breeds.</li> 
 <?php } else { ?>
-Sorry, you do not have a dog to train right now. :(
-<?php } ?>
-<?php } ?>  
-
-   <ul>
-        <li>The Dog breed you chose to begin agility training is:
-        <?php echo $results['playerchoice']; ?></li>
-
-        <li>The dog breed the other player chose is:
-        <?php echo $results['breed']; ?></li>
-        
-        <?php if ($results['winner'])  {?>
-
-        You won! Visit <a href="https://www.akc.org"> AKC </a> for more interesting facts about dog 
-breeds.</li>
-        <?php } else { ?>
-        Sorry! You did not answer correctly. Please visit <a href="https://www.akc.org"> AKC </a> for 
-more interesting facts about dog breeds.</li>
+        	Sorry! You did not answer correctly. Please visit <a href="https://www.akc.org"> AKC </a> 
+for more interesting facts about dog breeds.</li>
         <?php } ?>
-
+<?php } ?>
     </ul>       
        
   </body>
