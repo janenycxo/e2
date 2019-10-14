@@ -21,22 +21,18 @@
 
   <body>
   <h1>Which Dog would you choose? <br> Best in Breed for Agility Training </h1>
-      <img alt='AKC Breeds' title='AKC Breeds' 
-src='https://www.dogexpress.in/wp-content/uploads/2016/06/German-shepherd-vs-labrador-retriever-660x330.jpg' 
-class="center">
+      <img alt='AKC Breeds' title='AKC Breeds' src='https://www.dogexpress.in/wp-content/uploads/2016/06/German-shepherd-vs-labrador-retriever-660x330.jpg' class="center">
 
     <h2>MECHANICS</h2>
     This game is played random, by choosing the breed you prefer against the computer's choice.
     <br>Select between dog breeds to represent the dog you will begin working with for agility training.
-    <br>Choices are between Labrador Retriever (No. 1 favored breed) or German Shepherd (No. 2 favored 
-breed).
+    <br>Choices are between Labrador Retriever (No. 1 favored breed) or German Shepherd (No. 2 favored breed).
     <br>
    
     <br><br><h2>RULES OF THE GAME</h2>
     1. This is a multi-player game.
     <br>2. This game is played random, by choosing the breed you prefer against the computer's choice.
-    <br>3. Players choose a dog breed. There are 2 choices. The player whose choice mirrors the computer 
-wins.
+    <br>3. Players choose a dog breed. There are 2 choices. The player whose choice mirrors the computer wins.
     <br>4. If your choice matches, then you WIN. 
     <br>5. If your choice does not match, then you lose.
     <br>6. This is a game of chance, thre will be one winner each round. 
@@ -66,24 +62,12 @@ wins.
       </fieldset>
       </form>
    
-      <h2>Conclusion</h2>
+      <h2>Conclusion</h2> 
     <ul>
-        <li>The Dog breed you chose to begin agility training is:
-        <?php echo $results['playerchoice']; ?></li>
-
-        <li>The dog breed the other player chose is:
-        <?php echo $results['breed']; ?></li>
-        
-        <?php if ($results['winner'])  {?>
-
-        You won! Visit <a href="https://www.akc.org"> AKC </a> for more interesting facts about dog 
-breeds.</li>
-        <?php } else { ?>
-        Sorry! You did not answer correctly. Please visit <a href="https://www.akc.org"> AKC </a> for 
-more interesting facts about dog breeds.</li>
-        <?php } ?>
-
-    </ul>       
+      <li>Player 1 chose <?php echo $player1choice; ?></li>
+      <li>Player 2 chose <?php echo $player2choice; ?></li>
+      <li>The <strong>Winner</strong> is <?php echo $winner; ?></li>
+    </ul>   
        
   </body>
 </html>

@@ -1,5 +1,6 @@
-session_start();
+<?php
 
+session_start();
 if (isset($_SESSION['results'])) {
     $results = $_SESSION['results'];
     $showResults = true;
@@ -8,3 +9,4 @@ if (isset($_SESSION['results'])) {
 } else {
     $showResults = false;
 }
+
