@@ -72,7 +72,7 @@ wins.
 	    <ul>
 	        <li>The dog breed to begin agility training is: <?php echo $results['player1choice']; ?>
 	        </li>
-	        <li>The dog breed you chose chose is:<?php echo $results['breed']; ?>
+	        <li>The dog breed you chose chose is: <?php echo $results['breed']; ?>
 	        </li>
 	        <?php if ($results['winner']) { ?>
 	        <li class='winner'> Hooray! Let's begin our Agility training with your dog.</li>
