@@ -15,14 +15,14 @@ results still produced a tie. Perhaps requiring player to enter a selection befo
 resolve that. I also noticed the page did not provide a link to redirect the player to play the game 
 again afterwards as professor Buck showed us in lecture. 
 
-### Referencing the course notes on [Form design flow](https://hesweb.dev/e2/notes#/php/form-flow), 
-describe the form design flow used in this project.
+### Referencing the course notes on [Form design flow](https://hesweb.dev/e2/notes#/php/form-flow), describe the form design flow used in this project.
 For P3, Jeremiah used Form Design C and included index-controller.php (SESSION), index.php (form method: 
 GET) and process.php (appropriate annotations to GET results).
 
 
 ### Are there any separation of concern issues (i.e. non-display specific logic in view files, display 
-code in controller files)? No, I think he did a great job!
+code in controller files)? 
+No, I think he did a great job!
 
 ### Are there aspects of the code that you feel were not self-evident and would benefit from comments?
 
@@ -30,12 +30,10 @@ code in controller files)? No, I think he did a great job!
 ### List any/all built-in PHP methods used with a brief summary of what the method does
 Found on pages  index.php and process.php -
 
-<?php
-echo $results['winner']; 
-?> : Output the results of the winner from Rock, Paper, Scissor.  The PHP command (echo) outputs text to the 
+echo $results['winner']: Output the results of the winner from Rock, Paper, Scissor.  The PHP command (echo) outputs text to the 
 web browser.
 
-$_GET : The GET method sends the encoded information appended to process.php. This is one way information 
+$_GET: The GET method sends the encoded information appended to process.php. This is one way information 
 is sent to the web server.
 
 
