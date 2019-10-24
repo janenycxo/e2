@@ -17,8 +17,7 @@ again afterwards as professor Buck showed us in lecture.
 method: GET) and process.php (appropriate annotations to GET results).
 
 
-### Are there any separation of concern issues (i.e. non-display specific logic in view files, display 
-code in controller files)? 
+### Are there any separation of concern issues (i.e. non-display specific logic in view files, display code in controller files)? 
 + No, I think he did a great job!
 
 ### Are there aspects of the code that you feel were not self-evident and would benefit from comments?
@@ -26,20 +25,20 @@ No, Jeremiah's game was very clear and well defined.
 
 ### List any/all built-in PHP methods used with a brief summary of what the method does
 + Found on pages  index.php and process.php -
-
-echo $results['winner']: Output the results of the winner from Rock, Paper, Scissor.  The PHP command (echo) outputs text to the 
+echo $results['winner']: Output the results of the winner from Rock, Paper, Scissor.  The PHP command 
+(echo) outputs text to the 
 web browser.
 
-$_GET: The GET method sends the encoded information appended to process.php. This is one way information 
++$_GET: The GET method sends the encoded information appended to process.php. This is one way information 
 is sent to the web server.
 
 
-Found on page index-controller.php and process.php -
++Found on page index-controller.php and process.php -
 $_SESSION : A session is a way to store information (in variables) to be used across multiple pages. From index.php 
 we can access and retrieve the session information stored on index-controller and process.php. 
 
 
-Found on page process.php -
++ Found on page process.php -
 rand(0,2):  The rand() function generates a random integer and was helpful in choosing a random move of 
 Rock, Paper or Scissor.
 
@@ -74,8 +73,7 @@ if($p1 == $p2){
 compare it to class lectures and notes I find Jeremiah's project easy to understand and follow.
 
 
-### Are there any best practices discussed in course material that you feel were not addressed in the 
-code?
+### Are there any best practices discussed in course material that you feel were not addressed in the code?
 + I noticed Jeremiah did not use any outside resources. I would suggest using an code editor to check for 
 any errors.
 
