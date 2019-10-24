@@ -5,30 +5,27 @@
 + URL to reviewee's Github repo: *<https://github.com/jeremiahazurin/e2>*
 + URL to Jeremiah's P3 game: http://p3.jae2.me/
 
-*Answer the following questions in regards to the student's project you are reviewing. Include code 
-snippets in your answers when relevant.*
-
 
 ### Are you able to produce any errors or unexpected results?
-There were no errors produced, however I noticed when neither Rock, Paper or Scissors were chosen, the 
++ There were no errors produced, however I noticed when neither Rock, Paper or Scissors were chosen, the 
 results still produced a tie. Perhaps requiring player to enter a selection before hitting "Go" can 
 resolve that. I also noticed the page did not provide a link to redirect the player to play the game 
 again afterwards as professor Buck showed us in lecture. 
 
 ### Referencing the course notes on [Form design flow](https://hesweb.dev/e2/notes#/php/form-flow), describe the form design flow used in this project.
-For P3, Jeremiah used Form Design C and included index-controller.php (SESSION), index.php (form method: 
-GET) and process.php (appropriate annotations to GET results).
++ For P3, Jeremiah used Form Design C and included index-controller.php (SESSION), index.php (form 
+method: GET) and process.php (appropriate annotations to GET results).
 
 
 ### Are there any separation of concern issues (i.e. non-display specific logic in view files, display 
 code in controller files)? 
-No, I think he did a great job!
++ No, I think he did a great job!
 
 ### Are there aspects of the code that you feel were not self-evident and would benefit from comments?
-
+No, Jeremiah's game was very clear and well defined.
 
 ### List any/all built-in PHP methods used with a brief summary of what the method does
-Found on pages  index.php and process.php -
++ Found on pages  index.php and process.php -
 
 echo $results['winner']: Output the results of the winner from Rock, Paper, Scissor.  The PHP command (echo) outputs text to the 
 web browser.
@@ -48,16 +45,39 @@ Rock, Paper or Scissor.
 
 
 ### Are there any parts of the code that you found interesting or taught you something new?
++ I really liked how detailed he was in the codes found on process.php.
+if($p1 == $p2){
+    var_dump('Tie');
+    $winner = "There was a tie!";
+    } elseif($p1 == "rock" and $p2 == "scissors"){
+    var_dump('P1 wins');
+    $winner = "The winner is P1";
+    } elseif($p1 == "rock" and $p2 == "paper"){
+    var_dump('P2 wins');
+    $winner = "The winner is P2";
+    }  elseif($p1 == "paper" and $p2 == "rock"){
+    var_dump('P1 wins');
+    $winner = "The winner is P1";
+    } elseif($p1 == "paper" and $p2 == "scissors"){
+    var_dump('P2 wins');
+    $winner = "The winner is P2";
+    }  elseif($p1 == "scissors" and $p2 == "rock"){
+    var_dump('P2 wins');
+    $winner = "The winner is P2";
+    }  elseif($p1 == "scissors" and $p2 == "paper"){
+    var_dump('P1 wins');
+    $winner = "The winner is P1";}
 
 
 ### Are there any parts of the code that you don't understand?
-As a beginner, this was a difficult project for me to complete but as I look through each 
-page and compare it to class lectures and notes I find Jeremiah's project easy to understand and follow.
++ This was a difficult project for me to complete but as I look through each of Jeremiah's page and 
+compare it to class lectures and notes I find Jeremiah's project easy to understand and follow.
 
 
 ### Are there any best practices discussed in course material that you feel were not addressed in the 
 code?
-I noticed Jeremiah did not use any outside resources. I would suggest using an code editor to check for 
++ I noticed Jeremiah did not use any outside resources. I would suggest using an code editor to check for 
 any errors.
 
 ### Do you have any additional comments not covered in the above questions?
++ Very neat Jeremiah! I enjoyed playing this game.
