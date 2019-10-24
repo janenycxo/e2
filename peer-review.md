@@ -32,16 +32,17 @@ Found on pages  index.php and process.php -
 
 <?php
 echo $results['winner']; 
-?> :
-Output the results of the winner from Rock, Paper, Scissor.  The PHP command (echo) outputs text to the 
+?> : Output the results of the winner from Rock, Paper, Scissor.  The PHP command (echo) outputs text to the 
 web browser.
+
 $_GET : The GET method sends the encoded information appended to process.php. This is one way information 
 is sent to the web server.
 
+
 Found on page index-controller.php and process.php -
-$_SESSION :
- A session is a way to store information (in variables) to be used across multiple pages. From index.php 
+$_SESSION : A session is a way to store information (in variables) to be used across multiple pages. From index.php 
 we can access and retrieve the session information stored on index-controller and process.php. 
+
 
 Found on page process.php -
 rand(0,2):  The rand() function generates a random integer and was helpful in choosing a random move of 
