@@ -12,6 +12,7 @@ class AppController extends Controller
         
         return $this->app->view('index', [
             'welcome' => $welcomes[array_rand($welcomes)]
+       
         ]);
     }
 }
