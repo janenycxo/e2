@@ -1,7 +1,7 @@
 @extends('templates.master')
 
 @section('title')
-    {{ $welcome }}
+    
 @stop
 
 @section('content')
