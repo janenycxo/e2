@@ -10,7 +10,7 @@ class ProductController extends Controller
     public function __construct($app) 
     {
         parent::__construct($app);
-        $this->products = new Products($this->app->path('database/product.json'));
+        $this->products = new Products($this->app->path('database/products.json'));
     }
     
     public function index()
@@ -28,7 +28,7 @@ class ProductController extends Controller
         $product = $this->products->getById($id);
 
         if(is_null($product)) {
-            return $this->app->view('errors.404');
+            return $this->app->view('products.missing');
         }
                        
         return $this->app->view('products.show', [
