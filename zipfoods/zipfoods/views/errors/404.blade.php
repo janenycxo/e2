@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h2>404 Page Not Found  CUSTOM?</h2>
+<h2>404 Page Not Found</h2>
 <a href='{{ $app->config('app.url') }}'>{{ $app->config('app.url') }}</a>
 	
 </body>
