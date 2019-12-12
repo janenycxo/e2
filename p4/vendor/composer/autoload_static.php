@@ -40,6 +40,10 @@ class ComposerStaticInit059df570f46132a5407857c6ce422621
             'Illuminate\\Contracts\\' => 21,
             'Illuminate\\Container\\' => 21,
         ),
+        'F' => 
+        array (
+            'Faker\\' => 6,
+        ),
         'E' => 
         array (
             'E2\\' => 3,
@@ -128,6 +132,10 @@ class ComposerStaticInit059df570f46132a5407857c6ce422621
         'Illuminate\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/container',
+        ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
         'E2\\' => 
         array (

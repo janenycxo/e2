@@ -1,8 +1,11 @@
 @extends('templates.master')
 
 @section('title')
+ 
+ 
  Multi-player Game
 @endsection
+{{ $app->config('app.name') }}
 
 @section('content')
     
