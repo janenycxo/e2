@@ -1,53 +1,86 @@
 @extends('templates.master')
 
 @section('title')
- 
- 
- Multi-player Game
+Random Choice Game
+{{ $app->config('appname') }}
+
 @endsection
 
-{{ $app->config('app.name') }}
-
 @section('content')
-    
-<h1>Which Dog would you choose? <br> Best in Breed for Agility Training </h1>
+
+@if($newBreed)
+<div class='alert alert-success'>
+      Your game result {{ $newBreed }} has been added.
+</div>
+@endif
+
+@if($app->errorsExist())
+<ul class='error alert alert-danger'>
+    @foreach($app->errors() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@endif
+
+<center>
+
+<h1>Best in Breed for Agility Training, Which breed would you choose? </h1>
       <img alt='AKC Breeds' title='AKC Breeds' 
 src='https://www.dogexpress.in/wp-content/uploads/2016/06/German-shepherd-vs-labrador-retriever-660x330.jpg' 
 class="center">
 
-    <h2>MECHANICS</h2>
-    This game is played random, by choosing the breed you prefer against the computer's choice.
+    <br><br>
+    <label for='Mechanics'>Mechanics</label>
+    <br>This game is played random, by choosing the breed you prefer against the computer's choice.
     <br>Select between dog breeds to represent the dog you will begin working with for agility training.
-    <br>Choices are between Labrador Retriever (No. 1 favored breed) or German Shepherd (No. 2 favored 
-breed).
+    <br>Choices are between Labrador Retriever (Voted Most popular breed) or German Shepherd (Voted 2nd Most Popular 
+    breed).
+    <br><br>
     <br>
-   
-    <br><br><h2>RULES OF THE GAME</h2>
+    <label for='Rules'>Rules</label>
+    <br>
     1. This is a multi-player game.
     <br>2. This game is played random, by choosing the breed you prefer against the computer's choice.
     <br>3. Players choose a dog breed. There are 2 choices. The player whose choice mirrors the computer 
-wins.
+    wins.
     <br>4. If your choice matches, then you WIN. 
     <br>5. If your choice does not match, then you lose.
     <br>6. This is a game of chance, thre will be one winner each round. 
     <br>7. Make a selection from the 2 choices, and submit. 
-    <br><br><br>    
-       
-<form method='GET' action='process.php'>
+    <br><br>    
+   
+    <form method='POST' action='/save-new-game'>
+
         <br>
         <p>Choose the Dog Breed you would like to begin your agility training:</p>
-        <div>
-          <input type='radio' id='Labrador Retriever' name='breed' value='Labrador Retriever'>
+              
           <label for='Labrador Retriever'> Labrador Retriever</label>
-        </div>
-        <input type='radio' id='German Shepherd' name='breed' value='German Shepherd'>
-        <label for='German Shepherd'> German Shepherd</label>
+          <input type='radio' id='LabradorRetriever' name='breed'>
+
+          <label for='German Shepherd'> German Shepherd</label>
+          <input type='radio' id='GermanShepherd' name='breed'>
+          
 
         <div>
           <button type='submit'>Woof!</button>
         </div>
       </fieldset>
       </form>
- 
- 
-@endsection
+
+      @if ($result) 
+            <h2> Game Results</h2>
+
+          <ul>
+	        <li>The dog breed to begin agility training is: {{$result['player1']}}.</li>
+	        <li>The dog breed you chose is: {{$result['player2']}}.</li>
+
+	@elseif ($result['winner'] ==1) Hooray! Let's begin our Agility training with your dog.
+	        @else ($result['winner'] ==2) Sorry, you do not have a dog to train right now.
+	        
+      @endif
+	</ul>       
+    
+     
+    <a href='/result'>Click here to see the list of results from all games played.</a> 
+@endsection        
+</center>
