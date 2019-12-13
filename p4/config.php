@@ -2,14 +2,14 @@
 
 return [
     'app' => [
-        'url' => $app->env('APP_URL', 'http://localhost'),
-        'name' => $app->env('APP_NAME', 'My App'),
+        'url' => $app->env('APP_URL', 'http://p4.janenycxo.me'),
+        'name' => $app->env('APP_NAME', 'Project 4'),
         'timezone' => 'America/New_York',
-        'email' => 'my@email.com'
+        'email' => 'jane.yeh@gmail.com'
     ],
     'database' => [
-        'name' => 'myapp',
-        'username' => 'root',
-        'password' => '',
+        'name' => 'p4',
+        'username' => 'e2',
+        'password' => 'janeyehr',
     ]
 ];

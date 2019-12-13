@@ -18,7 +18,7 @@ $this->app->db()->createTable('results', [
             'winner' => 'int',
             'player1' => 'varchar(255)',
             'player2' => 'varchar(255)',     
-            ]);
+]);
             
 dump('Migration complete.');
    
