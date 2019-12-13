@@ -32,5 +32,5 @@ class AppController extends Controller
     $this->migrate();
     $this->seed();
     }
-
+ 
 }

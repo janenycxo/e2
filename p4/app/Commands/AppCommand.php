@@ -60,5 +60,5 @@ dump('Migration complete.');
     $this->migrate();
     $this->seed();
     }
-
+ 
         }
