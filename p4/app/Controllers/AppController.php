@@ -17,6 +17,7 @@ class AppController extends Controller
             return $this->app->view('results', ['results' => $results
             ]);  
     }
+
     public function result()
     {        
             $id = $this->app->param('id');           
@@ -25,7 +26,11 @@ class AppController extends Controller
             return $this->app->view('result', ['result' => $id]);
 
     }
+
+    public function fresh()
+    {
     $this->migrate();
     $this->seed();
     }
-    
+
+}
