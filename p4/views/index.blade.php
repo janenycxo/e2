@@ -28,7 +28,8 @@ Random Choice Game
       <img alt='AKC Breeds' title='AKC Breeds' 
 src='https://www.dogexpress.in/wp-content/uploads/2016/06/German-shepherd-vs-labrador-retriever-660x330.jpg' 
 class="center">
-
+<br><br>
+    <a href='/result'>Click here to see the list of results from all games played.</a> 
     <br><br>
     <label for='Mechanics'>Mechanics</label>
     <br>This game is played random, by choosing the breed you prefer against the computer's choice.
@@ -48,7 +49,7 @@ class="center">
     <br>6. This is a game of chance, thre will be one winner each round. 
     <br>7. Make a selection from the 2 choices, and submit. 
     <br><br>    
-   
+    
     <form method='POST' action='/save-new-game'>
 
         <br>
@@ -80,7 +81,6 @@ class="center">
       @endif
 	</ul>       
     
-     
-    <a href='/result'>Click here to see the list of results from all games played.</a> 
+    
 @endsection        
 </center>
