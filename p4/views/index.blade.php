@@ -64,22 +64,10 @@ class="center">
 
         <div>
           <button type='submit'>Woof!</button>
-        </div>
-      </fieldset>
+        </div>    
       </form>
-
-      @if ($result) 
-            <h2> Game Results</h2>
-
-          <ul>
-	        <li>The dog breed to begin agility training is: {{$result['player1']}}.</li>
-	        <li>The dog breed you chose is: {{$result['player2']}}.</li>
-
-	@elseif ($result['winner'] ==1) Hooray! Let's begin our Agility training with your dog.
-	        @else ($result['winner'] ==2) Sorry, you do not have a dog to train right now.
-	        
-      @endif
-	</ul>       
+      
+      
     
     
 @endsection        

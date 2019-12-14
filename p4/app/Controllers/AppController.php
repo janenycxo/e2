@@ -17,28 +17,13 @@ class AppController extends Controller
             'breed' => 'required',  
         ]);
 
-        $player1 = $this->app->input('breed');
-        $player2 = $breed[rand(0, 1)];
-        $breed = ['Labrador Retriever', 'German Shepherd'];
-        if ($breed == $player1) {
-            $winner = true;
-        } else {
-            $winner = false;
-        }
-
-$results = [
-    'winner' => $winner,
-    'player1' => $player1,
-    'breed' => $breed,
-];
-
         $data = [
             'breed' => $this->app->input('breed')
         ];
 
         $this->app->db()->insert('results', $data);
 
-        $this->$app->redirect('/', ['breed' => $data ['breed']]);    
+          return 'Process the form and persist the new result to the database.';
             
     }
 
