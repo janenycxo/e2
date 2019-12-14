@@ -8,6 +8,11 @@ class AppController extends Controller
         return $this->app->view('index');
     }
 
+
+    public function saveNewResult() {
+        return "Process the result and persist the new information into database.";
+    }
+
     
     public function results()
     {

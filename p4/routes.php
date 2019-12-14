@@ -2,7 +2,7 @@
 
 return [
     '/' => ['AppController', 'index'],
-    '/save-new-game'=> ['AppController', 'saveNewResult'],
+    '/save-new-result'=> ['AppController', 'saveNewResult'],
     '/results' => ['AppController', 'results'],
     '/result' => ['AppController', 'result'],
     

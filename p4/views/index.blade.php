@@ -54,7 +54,7 @@ class="center">
               
           <label for='Labrador Retriever'> Labrador Retriever</label>
           <input type='radio' id='LabradorRetriever' name='breed'>
-
+<br>
           <label for='German Shepherd'> German Shepherd</label>
           <input type='radio' id='GermanShepherd' name='breed'>
           <div>
