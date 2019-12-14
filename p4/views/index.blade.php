@@ -7,7 +7,6 @@ Random Choice Game
 @endsection
 
 @section('content')
-
 @if($newBreed)
 <div class='alert alert-success'>
       Your game result {{ $newBreed }} has been added.
@@ -21,8 +20,6 @@ Random Choice Game
     @endforeach
 </ul>
 @endif
-
-<center>
 
 <h1>Best in Breed for Agility Training, Which breed would you choose? </h1>
       <img alt='AKC Breeds' title='AKC Breeds' 
@@ -60,15 +57,12 @@ class="center">
 
           <label for='German Shepherd'> German Shepherd</label>
           <input type='radio' id='GermanShepherd' name='breed'>
-          
-
-        <div>
-          <button type='submit'>Woof!</button>
-        </div>    
+          <div>
+                <button type='submit'>Woof!</button>
+          </div>   
+          </fieldset> 
       </form>
       
-      
-    
-    
-@endsection        
-</center>
+    <p class='winner'>&rarr; <a href='/results'>List of Dogs the began Agility Training</a></p>
+
+@endsection

@@ -6,16 +6,12 @@ All Games Played
 
 @section('content')
 
-@if($app->old('resultNotFound'))
-<dive class='alert alert-warning'>
-Sorry, the result you are looking for is not available.
-</div>
+<h2>All Results</h2>
 
-<h2>List of Game Results</h2>
 <ul>
 @foreach($results as $result)
-    <li><a href='/result?id={{ $result['id'] }}'>{{ $result['breed'] }}</li>
-    @endforeach
+<li>{{ $result['player1'] }}</li>
+@endforeach
 </ul>
 
 @endsection

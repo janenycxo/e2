@@ -2,63 +2,43 @@
 namespace App\Commands;
 class AppCommand extends Command
 {
-    /**
-     *
-     */
-    public function test()
+        public function migrate()
     {
-        dump('It works! You invoked your first command.');
-    }
-
-
-public function migrate()
-
-{
-$this->app->db()->createTable('results', [
+        $this->app->db()->createTable('results', [
             'winner' => 'int',
             'player1' => 'varchar(255)',
-            'player2' => 'varchar(255)',     
-]);
-            
-dump('Migration complete.');
-   
-
-}
+            'player2' => 'varchar(255)',
+            'breed' => 'varchar(255)',
+        ]);
+        dump('It works! You invoked your migrate command.');
+    }
     public function seed()
-    {  
-        # Instantiate a new instance of the Faker\Factory class
-
-        $faker = \Faker\Factory::create();
-
-    }
-    public function seedResults()
     {
-    # Use a loop to create 10 results
-        for ($i = 0; $i < 10; $i++) {
 
+$faker =\Faker\Factory::create();
 
-            # Set up a result
-            $result = [
-                'winner' => $faker->sentences (1,true),
-                'player1' => $faker->words (3,true),
-                'player2' => $faker->sentences (rand(3,10)),
-            ];
-        }
+# Use a loop to create 10 games
+for ($i = 0; $i < 10; $i++) {
 
-        
-        
-                   # Insert the results
-        $this->app->db()->insert('results', '$result');
-                        
-        dump('Seeds complete.');
-    
-    }
-        
-    public function fresh()
-    
-    {
-    $this->migrate();
-    $this->seed();
-    }
- 
-        }
+    # Set up a result
+    $result = [
+        'winner' => $faker->sentences (1,true),
+        'player1' => $faker->words (3,true),
+        'player2' => $faker->sentences (3,true),
+        'breed' => $faker->words (3,true),
+    ];
+
+           # Insert the results
+$this->app->db()->insert('results', $result);
+}
+
+dump('Seed complete.');
+}
+
+public function fresh()
+
+{
+$this->migrate();
+$this->seed();
+}
+}
