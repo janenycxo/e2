@@ -7,11 +7,9 @@ Random Choice Game
 @endsection
 
 @section('content')
-@if($newBreed)
-<div class='alert alert-success'>
-      Your game result {{ $newBreed }} has been added.
-</div>
-@endif
+
+<h3>Click there for a list of  <a href='/results'>all the dogs that began agility training.</a></h3>
+
 
 @if($app->errorsExist())
 <ul class='error alert alert-danger'>
@@ -26,14 +24,16 @@ Random Choice Game
 src='https://www.dogexpress.in/wp-content/uploads/2016/06/German-shepherd-vs-labrador-retriever-660x330.jpg' 
 class="center">
 <br><br>
-    <a href='/result'>Click here to see the list of results from all games played.</a> 
-    <br><br>
+    
     <label for='Mechanics'>Mechanics</label>
     <br>This game is played random, by choosing the breed you prefer against the computer's choice.
     <br>Select between dog breeds to represent the dog you will begin working with for agility training.
     <br>Choices are between Labrador Retriever (Voted Most popular breed) or German Shepherd (Voted 2nd Most Popular 
     breed).
+   
     <br><br>
+    <h3>Click here for <a href='/result'> the dog chosen to begin agility training.</a></h3>
+
     <br>
     <label for='Rules'>Rules</label>
     <br>
@@ -47,7 +47,7 @@ class="center">
     <br>7. Make a selection from the 2 choices, and submit. 
     <br><br>    
     
-    <form method='POST' action='/save-new-game'>
+    <form method='POST' action='/save-new-result'>
 
         <br>
         <p>Choose the Dog Breed you would like to begin your agility training:</p>
@@ -64,5 +64,5 @@ class="center">
       </form>
       
     <p class='winner'>&rarr; <a href='/results'>List of Dogs the began Agility Training</a></p>
-
+    
 @endsection

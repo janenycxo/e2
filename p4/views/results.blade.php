@@ -6,7 +6,7 @@ All Games Played
 
 @section('content')
 
-<h2>All Results</h2>
+<h3>All Results</h3>
 
 <ul>
 @foreach($results as $result)

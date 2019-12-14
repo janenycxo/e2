@@ -5,7 +5,7 @@ class AppCommand extends Command
         public function migrate()
     {
         $this->app->db()->createTable('results', [
-            'winner' => 'int',
+            'winner' => 'varchar(255)',
             'player1' => 'varchar(255)',
             'player2' => 'varchar(255)',
             'breed' => 'varchar(255)',
