@@ -16,7 +16,13 @@ Sorry, the result you are looking for is not available.
 
 <ul>
 @foreach($results as $result)
-<li><a href='/result?id={{ $result['id'] }}'>{{ $result['breed'] }}</li></a>
+<li><a href='/result?id={{ $result['id'] }}'>{{ $result['id'] }}</li></a>
+
+<div>
+   <a href='http://p4.janenycxo.me/'>Click go back to main page and Play Again</a>
+    </div>
+
+
 @endforeach
 </ul>
 

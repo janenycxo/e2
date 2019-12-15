@@ -40,10 +40,15 @@ class AppController extends Controller
     {        
         $id = $this->app->param('id');    
           
-        dump($id);
+      
+$result = $this->app->db()->findById('results', $id);
+          
+if(is_null($post)) {
+    return $this->app->redirect('/results', ['resultNotFound' => true]);    
+}
 
-          return $this->app->view('result');
-    }
+  return $this->app->view('result', ['result' => $result]);
+}
 
     public function fresh()
     {

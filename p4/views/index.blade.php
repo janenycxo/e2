@@ -7,33 +7,7 @@ Random Choice Game
 @endsection
 
 @section('content')
-
-@if($breed)
-<div class='alert alert-success'>
-The dog breed you selected {{ $breed }} has been added.
-</div>
-@endif
-
-@if($app->errorsExist())
-<ul class='error alert alert-danger'>
-    @foreach($app->errors() as $error)
-    <li>{{ $error }}</li>
-    @endforeach
-</ul>
-@endif
-
-<h3>Click there for a list of  <a href='/results'>all the dogs that began agility training.</a></h3>
-
-
-@if($app->errorsExist())
-<ul class='error alert alert-danger'>
-    @foreach($app->errors() as $error)
-    <li>{{ $error }}</li>
-    @endforeach
-</ul>
-@endif
-
-<li><h1>Best in Breed for Agility Training, Which breed would you choose? </h1></li>
+<h1>Best in Breed for Agility Training, Which breed would you choose? </h1>
       <img alt='AKC Breeds' title='AKC Breeds' 
 src='https://www.dogexpress.in/wp-content/uploads/2016/06/German-shepherd-vs-labrador-retriever-660x330.jpg' 
 class="center">
@@ -46,7 +20,7 @@ class="center">
     breed).
    
     <br><br>
-    <h3>Click here for <a href='/result'> the dog chosen to begin agility training.</a></h3>
+    <h3>Click here for <a href='/result'> the dog CHOSEN in this round to begin agility training.</a></h3>
 
     <br>
     <label for='Rules'>Rules</label>
@@ -61,7 +35,7 @@ class="center">
     <br>7. Make a selection from the 2 choices, and submit. 
     <br><br>    
     
-    <form method='POST' action='/save-new-result'>
+    <form method='GET' action='/save-new-result'>
 
         <br>
         <p>Choose the Dog Breed you would like to begin your agility training:</p>
@@ -76,6 +50,33 @@ class="center">
           </div>   
           </fieldset> 
       </form>
+      <h3>Click there for a list of  <a href='/results'>all the dogs that began agility training.</a></h3> 
+@if($breed)
+<div class='alert alert-success'>
+The dog breed you selected {{ $breed }} has been added.
+</div>
+@endif
+
+@if($app->errorsExist())
+<ul class='error alert alert-danger'>
+    @foreach($app->errors() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@endif
+
+
+
+
+@if($app->errorsExist())
+<ul class='error alert alert-danger'>
+    @foreach($app->errors() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@endif
+
+
       
     <p class='winner'>&rarr; <a href='/results'>List of Dogs the began Agility Training</a></p>
     
@@ -86,7 +87,7 @@ class="center">
     <li class='or'>{{ $error }}</li>
     @endforeach
 </ul>
-  @endif
+@endif
 
 @if ($result)
 
