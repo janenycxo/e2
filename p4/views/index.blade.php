@@ -33,7 +33,7 @@ The dog breed you selected {{ $breed }} has been added.
 </ul>
 @endif
 
-<h1>Best in Breed for Agility Training, Which breed would you choose? </h1>
+<li><h1>Best in Breed for Agility Training, Which breed would you choose? </h1></li>
       <img alt='AKC Breeds' title='AKC Breeds' 
 src='https://www.dogexpress.in/wp-content/uploads/2016/06/German-shepherd-vs-labrador-retriever-660x330.jpg' 
 class="center">
@@ -79,4 +79,33 @@ class="center">
       
     <p class='winner'>&rarr; <a href='/results'>List of Dogs the began Agility Training</a></p>
     
+
+    @if($app->errorsExist())
+<ul>
+    @foreach($app->errors() as $error)
+    <li class='or'>{{ $error }}</li>
+    @endforeach
+</ul>
+  @endif
+
+@if ($result)
+
+<h2>Individual results{{ $result['id'] }} for Breeds that began agility training-</h2>
+<a href='/results'>All the breeds that began agility training.</a>
+  <ul>
+      Player1 chose {{ $result['player1'] }}. </li>
+      Player 2 chose {{ $result['player2'] }}. </li>
+
+@if ($result['winner'] == 1)
+      Hooray! You have a dog to begin agility training!
+      Click to see a list of <a href='/results'>all the dogs that began agility training.</a>
+
+      @else ($result['winner'] == 2)
+      Sorry, you do not have a dog to begin agility training.
+      Click to see a list of  <a href='/results'>all the dogs that began agility training.</a>
+
+@endif 
+  </ul>
+
+@endif 
 @endsection

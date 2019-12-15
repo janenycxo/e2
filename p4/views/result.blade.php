@@ -8,9 +8,5 @@ Your result {{ $result['id'] }}
 
 @section('content')
 <h2>Individual Result</h2>
-<p>
-{{ $post['title'] }}
-<p>
-    
 <a href='/results'>&larr;Back to the list of Breeds that have started agility training.</a>
 @endsection
