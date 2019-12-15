@@ -6,11 +6,17 @@ All Games Played
 
 @section('content')
 
-<h3>All Results</h3>
+@if($app->old('resultNotFound'))
+<div class='alert alert-warning'>
+Sorry, the result you are looking for is not available.
+</div>
+@endif
+
+<h3>Results of Breeds Chosen</h3>
 
 <ul>
 @foreach($results as $result)
-<li>{{ $result['player1'] }}</li>
+<li><a href='/result?id={{ $result['id'] }}'>{{ $result['id'] }}</li></a>
 @endforeach
 </ul>
 

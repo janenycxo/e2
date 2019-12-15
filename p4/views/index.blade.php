@@ -8,6 +8,20 @@ Random Choice Game
 
 @section('content')
 
+@if($breed)
+<div class='alert alert-success'>
+The dog breed you selected {{ $breed }} has been added.
+</div>
+@endif
+
+@if($app->errorsExist())
+<ul class='error alert alert-danger'>
+    @foreach($app->errors() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@endif
+
 <h3>Click there for a list of  <a href='/results'>all the dogs that began agility training.</a></h3>
 
 
