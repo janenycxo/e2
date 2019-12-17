@@ -19,8 +19,8 @@ $choose = ['Labrador Retriever', 'German Shepherd'];
 
 # Use a loop to create 10 games
 for ($i = 0; $i < 10; $i++) {
-  
-   $player2 = $choose[rand(0, 1)];
+    $player1 = $choose[rand(0, 1)];
+    $player2 = $choose[rand(0, 1)];
 
 if ($player1 == "Labrador Retriever" and $player2 == "Labrador Retriever") {
     $winner = 1;
@@ -28,7 +28,7 @@ if ($player1 == "Labrador Retriever" and $player2 == "Labrador Retriever") {
     $winner = 2;
 }
 # Set up game/and data for table
-    $selection = [
+    $selections = [
             'winner' => $winner,
             'player1' => $player1,
             'player2' => $player2,

@@ -5,8 +5,8 @@ class AppController extends Controller
     
     public function index()
     { 
-        $selection = $this->app->old('selection', null);
-        return $this->app->view('index', ['selection' => $selection]);
+        $selections = $this->app->old('selections', null);
+        return $this->app->view('index', ['selections' => $selections]);
     }
     public function saveNewResult() 
     {
@@ -14,23 +14,25 @@ class AppController extends Controller
             'dog' => 'required',
             ]);
             $winner = null;
-            $breed = $this->app->input('dog');
+            $player1 = $this->app->input('dog');
 
             $choose = ['Labrador Retriever', 'German Shepherd'];
             $player2 = $choose[rand(0, 1)];
                         
-            if ($choose == "Labrador Retriever" and $player2 == "Labrador Retriever") {
+            if ($player1 == $player2) {
                 $winner = true;
             } else {
                 $winner = false;
             }
 
-            $selection = [
+            $selections = [
                 'winner' => $winner,
+                'player1' => $player1,
                 'player2' => $player2,
             ];
 
-        $this->app->db()->insert('selections', $selection);
+        $this->app->db()->insert('selections', $selections);
+        $this->app->redirect('/', ['selections' => $selections]);
         
     }
     

@@ -20,9 +20,6 @@ class="center">
     breed).
    
     <br><br>
-    <h3>The dog breed <a href='/selection'> has been CHOSEN in this round to begin agility training.</a></h3>
-
-    <br>
     <label for='Rules'>Rules</label>
     <br>
     1. This is a multi-player game.
@@ -41,10 +38,10 @@ class="center">
         <p>Choose the Dog Breed you would like to begin your agility training:</p>
               
           <label for='Labrador Retriever'> Labrador Retriever</label>
-          <input type='radio' value='LabradorRetriever' id='LabradorRetriever' name='dog'>
+          <input type='radio' value='Labrador Retriever' id='LabradorRetriever' name='dog'>
 <br>
           <label for='German Shepherd'> German Shepherd</label>
-          <input type='radio' value='GermanShepherd' id='GermanShepherd' name='dog'>
+          <input type='radio' value='German Shepherd' id='GermanShepherd' name='dog'>
           <div>
                 <button type='submit'>Woof!</button>
           </div>   
@@ -62,35 +59,33 @@ Please make a selection.
 </ul>
 
 @endif 
+@if($selections)
 
-      <h3>Click there for a list of  <a href='/selections'>all the dogs that began agility training.</a></h3> 
-@if($selection)
+<h2>Dog breed {{$selections['player1']}} selected this round.</h2>
+  &rarr; <a href='/selections'>Breed Result List</a>
+ 
+  <ul>
+  <li> Player 1 chose {{ $selections['player1'] }}. </li>
+  <li> Player 2 chose {{ $selections['player2'] }}. </li>
+
+@if ($selections['winner'] == true)
+<li> Player wins!</li>
+<li> View all the dogs <a href='/selections'>chosen to begin agility training!</a>
+@elseif ($selections['winner'] == false)
+<li> Player did not win. </li>
+@endif
+</ul>
+
+<h3>Click there for a list of  <a href='/selections'>all the dogs that began agility training.</a></h3> 
+@if($selections)
 <div class='alert alert-success'>
-The dog breed you selected {{$selection['player1']}} has been added.
+The dog breed you selected {{$selections['player1']}} has been added.
 </div>
 @endif
-
-
-
-
-@if($selection)
-<div class="alert alert-{{$selection[0]}}">
-<ul>
-<li>Player 2 chose {{$selection['player2']}}.</li>
-<li>   
-<li><a href='/selections'>All the breeds that began agility training.</a></li>
-   
-@if ($selection['winner'] == 0)
-      Hooray! You have a dog to begin agility training!
-      Click to see a list of <a href='/selections'>all the dogs that began agility training.</a>
-
-      @else ($selection['winner'] == 1)
-      Sorry, you do not have a dog to begin agility training.
-      
-      <br>Click to see a list of  <a href='/selections'>all the dogs that began agility training.</a>
-      </div>
-@endif 
-  </ul>
+    
+<br>Click to see a list of  <a href='/selections'>all the dogs that began agility training.</a>
+</div>
+</ul>
 
 @endif 
 <a href='/selections'>&larr;Back to the list of Breeds that have started agility training.</a>
