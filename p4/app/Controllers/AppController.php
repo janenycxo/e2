@@ -54,4 +54,3 @@ class AppController extends Controller
         return $this->app->view('selection', ['selection' => $selection]);
     }
    }
-   
