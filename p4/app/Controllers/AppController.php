@@ -15,9 +15,11 @@ class AppController extends Controller
         ]);
         
             $data = [
-            'breed' => $this->app->input('breed')
+            'breed' => $this->app->input('breed'),
+            'result' => $this->app->input('result')
             ];
-        $this->app->db()->insert('results', $data);
+
+        $this->app->db()->insert('result', $data);
         
         $this->app->redirect('/', ['breed' => $data['breed']]);
         return "Process the result and persist the new information into database.";

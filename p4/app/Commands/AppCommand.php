@@ -14,12 +14,9 @@ class AppCommand extends Command
     }
     public function seed()
     {
-
 $faker =\Faker\Factory::create();
-
 # Use a loop to create 10 games
 for ($i = 0; $i < 10; $i++) {
-
     # Set up a result
     $result = [
         'winner' => $faker->sentences (1,true),
@@ -27,16 +24,12 @@ for ($i = 0; $i < 10; $i++) {
         'player2' => $faker->sentences (3,true),
         'breed' => $faker->words (3,true),
     ];
-
            # Insert the results
 $this->app->db()->insert('results', $result);
 }
-
 dump('Seed complete.');
 }
-
 public function fresh()
-
 {
 $this->migrate();
 $this->seed();

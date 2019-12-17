@@ -31,7 +31,7 @@ class="center">
     wins.
     <br>4. If your choice matches, then you WIN. 
     <br>5. If your choice does not match, then you lose.
-    <br>6. This is a game of chance, thre will be one winner each round. 
+    <br>6. This is a game of chance, there will be one winner each round. 
     <br>7. Make a selection from the 2 choices, and submit. 
     <br><br>    
     
@@ -53,7 +53,7 @@ class="center">
       <h3>Click there for a list of  <a href='/results'>all the dogs that began agility training.</a></h3> 
 @if($breed)
 <div class='alert alert-success'>
-The dog breed you selected {{ $breed }} has been added.
+The dog breed you selected {{ $result }} has been added.
 </div>
 @endif
 
@@ -64,20 +64,7 @@ The dog breed you selected {{ $breed }} has been added.
     @endforeach
 </ul>
 @endif
-
-
-
-
-@if($app->errorsExist())
-<ul class='error alert alert-danger'>
-    @foreach($app->errors() as $error)
-    <li>{{ $error }}</li>
-    @endforeach
-</ul>
-@endif
-
-
-      
+    
     <p class='winner'>&rarr; <a href='/results'>List of Dogs the began Agility Training</a></p>
     
 
@@ -96,6 +83,7 @@ The dog breed you selected {{ $breed }} has been added.
   <ul>
       Player1 chose {{ $result['player1'] }}. </li>
       Player 2 chose {{ $result['player2'] }}. </li>
+<br>
 
 @if ($result['winner'] == 1)
       Hooray! You have a dog to begin agility training!
