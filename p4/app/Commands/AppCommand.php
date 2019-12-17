@@ -34,7 +34,7 @@ if ($player1 == "Labrador Retriever" and $player2 == "Labrador Retriever") {
             'player2' => $player2,
         ];
     # Insert game
-    $this->app->db()->insert('selection', $selection);
+    $this->app->db()->insert('selections', $selections);
 }
         dump('It works! You invoked your seed command.');
     }
