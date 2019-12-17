@@ -13,7 +13,7 @@ class AppController extends Controller
         $this->app->validate([
             'dog' => 'required',
             ]);
-        
+            $winner = null;
             $breed = $this->app->input('dog');
 
             $choose = ['Labrador Retriever', 'German Shepherd'];
