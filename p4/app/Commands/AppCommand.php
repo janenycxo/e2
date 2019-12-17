@@ -15,20 +15,30 @@ class AppCommand extends Command
     public function seed()
     {
 $faker =\Faker\Factory::create();
+$choose = ['Labrador Retriever', 'German Shepherd'];
+
 # Use a loop to create 10 games
 for ($i = 0; $i < 10; $i++) {
-    # Set up a result
-    $result = [
-        'winner' => $faker->sentences (1,true),
-        'player1' => $faker->words (3,true),
-        'player2' => $faker->sentences (3,true),
-        'breed' => $faker->words (3,true),
-    ];
-           # Insert the results
-$this->app->db()->insert('results', $result);
+  
+   $player2 = $choose[rand(0, 1)];
+
+if ($player1 == "Labrador Retriever" and $player2 == "Labrador Retriever") {
+    $winner = 1;
+} else {
+    $winner = 2;
 }
-dump('Seed complete.');
+# Set up game/and data for table
+    $data = [
+            'winner' => $winner,
+            'player1' => $player1,
+            'player2' => $player2,
+        ];
+    # Insert game
+    $this->app->db()->insert('results', $data);
 }
+        dump('It works! You invoked your seed command.');
+    }
+
 public function fresh()
 {
 $this->migrate();

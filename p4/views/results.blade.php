@@ -7,22 +7,18 @@ All Games Played
 
 @section('content')
 
-@if($app->old('resultNotFound'))
+@if($app->old('selectionNotFound'))
 <div class='alert alert-warning'>
 Sorry, the result you are looking for is not available.
 </div>
 @endif
 
-<h3>Results of Breeds Chosen</h3>
-
+<h1>Results of Breeds Chosen</h1>
+<a href='/'><&larr;Go back to main page and PLAY again!</a>
+Choose a selection to see details.
 <ul>
-@foreach($results as $result)
-<li>This dog breed will begin agility training for this round. <a href='/result?id={{ $result['id'] }}'>{{ $result['id'] }}</li></a>
-
-<div>
-   <a href='http://p4.janenycxo.me/'>Click go back to main page and Play Again</a>
-    </div>
-
+@foreach($selections as $selection)
+<li>This dog breed <a href="/selection?id={{$selection['id']}}">will begin agility training for this round.</li></a>
 
 @endforeach
 </ul>

@@ -5,42 +5,52 @@ class AppController extends Controller
     
     public function index()
     { 
-        $breed = $this->app->old('breed', null);
-        return $this->app->view('index', ['breed' => $breed]);
+        $data = $this->app->old('data', null);
+        return $this->app->view('index', ['data' => $data]);
     }
     public function saveNewResult() 
     {
         $this->app->validate([
-            'breed' => 'required',
-        ]);
+            'dog' => 'required',
+            ]);
         
+
+            $breed = $this->app->input('dog');
+
+            $choose = ['Labrador Retriever', 'German Shepherd'];
+            $player2 = $choose[rand(0, 1)];
+                        
+            if ($choose == "Labrador Retriever" and $player2 == "Labrador Retriever") {
+                $winner = true;
+            } else {
+                $winner = false;
+            }
+
             $data = [
-            'breed' => $this->app->input('breed'),
-            'result' => $this->app->input('result')
+                'winner' => $winner,
+                'player1' => $player1,
+                'player2' => $player2,
             ];
 
-        $this->app->db()->insert('result', $data);
+        $this->app->db()->insert('results', $data);
         
-        $this->app->redirect('/', ['breed' => $data['breed']]);
-        return "Process the result and persist the new information into database.";
+        $this->app->redirect('/', ['data' => $data]);
     }
     
-    public function results()
+    public function selectionResults()
     {
-            $results = $this->app->db()->all('results');
-            return $this->app->view('results', ['results' =>$results]);
+            $selections = $this->app->db()->all('results');
+            return $this->app->view('selection-results', ['selections' =>$selections]);
     }
-    public function result()
+    public function selection()
     {        
-        $id = $this->app->param('id');    
+        $selectionId = $this->app->param('id');    
           
-        dump($id);
-          return $this->app->view('result');
+        $selection = $this->app->db()->findById('results', $selectionId);
+        if(is_null($selection)) {
+            return $this->app->redirect("/selection-results", ["selectionNotFound" => true]);
+        }
+
+        return $this->app->view('selection', ['selection' => $selection]);
     }
-    public function fresh()
-    {
-    $this->migrate();
-    $this->seed();
-    }
- 
-}
+   }

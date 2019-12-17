@@ -20,13 +20,13 @@ class="center">
     breed).
    
     <br><br>
-    <h3>Click here for <a href='/result'> the dog CHOSEN in this round to begin agility training.</a></h3>
+    <h3>The dog breed <a href='/result'> has been CHOSEN in this round to begin agility training.</a></h3>
 
     <br>
     <label for='Rules'>Rules</label>
     <br>
     1. This is a multi-player game.
-    <br>2. This game is played random, by choosing the breed you prefer against the computer's choice.
+    <br>2. This game is played random, by choosing the dog you prefer against the computer's choice.
     <br>3. Players choose a dog breed. There are 2 choices. The player whose choice mirrors the computer 
     wins.
     <br>4. If your choice matches, then you WIN. 
@@ -35,66 +35,57 @@ class="center">
     <br>7. Make a selection from the 2 choices, and submit. 
     <br><br>    
     
-    <form method='GET' action='/save-new-result'>
+    <form method='POST' action='/save-new-result'>
 
         <br>
         <p>Choose the Dog Breed you would like to begin your agility training:</p>
               
           <label for='Labrador Retriever'> Labrador Retriever</label>
-          <input type='radio' id='LabradorRetriever' name='breed'>
+          <input type='radio' value='LabradorRetriever' id='LabradorRetriever' name='dog'>
 <br>
           <label for='German Shepherd'> German Shepherd</label>
-          <input type='radio' id='GermanShepherd' name='breed'>
+          <input type='radio' value='GermanShepherd' id='GermanShepherd' name='dog'>
           <div>
                 <button type='submit'>Woof!</button>
           </div>   
           </fieldset> 
       </form>
+      
+      
+
       <h3>Click there for a list of  <a href='/results'>all the dogs that began agility training.</a></h3> 
-@if($breed)
+@if($data)
 <div class='alert alert-success'>
-The dog breed you selected {{ $result }} has been added.
+The dog breed you selected {{ucfirst($data['player1']) }} has been added.
+</div>
+@endif
+@if($app->errorsExist())
+<div class='error alert alert-danger'>
+Please make a selection.   
 </div>
 @endif
 
-@if($app->errorsExist())
-<ul class='error alert alert-danger'>
-    @foreach($app->errors() as $error)
-    <li>{{ $error }}</li>
-    @endforeach
-</ul>
-@endif
-    
-    <p class='winner'>&rarr; <a href='/results'>List of Dogs the began Agility Training</a></p>
-    
 
-    @if($app->errorsExist())
+
+@if($data)
+<div class="alert alert-{{$data[0]}}">
 <ul>
-    @foreach($app->errors() as $error)
-    <li class='or'>{{ $error }}</li>
-    @endforeach
-</ul>
-@endif
-
-@if ($result)
-
-<h2>Individual results{{ $result['id'] }} for Breeds that began agility training-</h2>
-<a href='/results'>All the breeds that began agility training.</a>
-  <ul>
-      Player1 chose {{ $result['player1'] }}. </li>
-      Player 2 chose {{ $result['player2'] }}. </li>
-<br>
-
-@if ($result['winner'] == 1)
+<li>Player 2 chose {{ucfirst($data['player2'])}}.</li>
+<li>   
+<li><a href='/results'>All the breeds that began agility training.</a></li>
+   
+@if ($data['winner'] == 1)
       Hooray! You have a dog to begin agility training!
       Click to see a list of <a href='/results'>all the dogs that began agility training.</a>
 
-      @else ($result['winner'] == 2)
+      @else ($data['winner'] == 2)
       Sorry, you do not have a dog to begin agility training.
-      Click to see a list of  <a href='/results'>all the dogs that began agility training.</a>
-
+      
+      <br>Click to see a list of  <a href='/results'>all the dogs that began agility training.</a>
+      </div>
 @endif 
   </ul>
 
 @endif 
+<a href='/results'>&larr;Back to the list of Breeds that have started agility training.</a>
 @endsection
