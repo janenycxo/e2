@@ -32,7 +32,6 @@ class AppController extends Controller
 
         $this->app->db()->insert('selections', $selection);
         
-        $this->app->redirect('/', ['selections' => $selection]);
     }
     
     public function selections()
