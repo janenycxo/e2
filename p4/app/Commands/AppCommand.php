@@ -4,7 +4,7 @@ class AppCommand extends Command
 {
         public function migrate()
     {
-        $this->app->db()->createTable('results', [
+        $this->app->db()->createTable('selections', [
             'winner' => 'varchar(255)',
             'player1' => 'varchar(255)',
             'player2' => 'varchar(255)',
@@ -28,13 +28,13 @@ if ($player1 == "Labrador Retriever" and $player2 == "Labrador Retriever") {
     $winner = 2;
 }
 # Set up game/and data for table
-    $data = [
+    $selection = [
             'winner' => $winner,
             'player1' => $player1,
             'player2' => $player2,
         ];
     # Insert game
-    $this->app->db()->insert('results', $data);
+    $this->app->db()->insert('selection', $selection);
 }
         dump('It works! You invoked your seed command.');
     }

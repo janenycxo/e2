@@ -5,8 +5,8 @@ class AppController extends Controller
     
     public function index()
     { 
-        $data = $this->app->old('data', null);
-        return $this->app->view('index', ['data' => $data]);
+        $selection = $this->app->old('selection', null);
+        return $this->app->view('index', ['selection' => $selection]);
     }
     public function saveNewResult() 
     {
@@ -14,7 +14,6 @@ class AppController extends Controller
             'dog' => 'required',
             ]);
         
-
             $breed = $this->app->input('dog');
 
             $choose = ['Labrador Retriever', 'German Shepherd'];
@@ -26,31 +25,28 @@ class AppController extends Controller
                 $winner = false;
             }
 
-            $data = [
+            $selection = [
                 'winner' => $winner,
-                'player1' => $player1,
                 'player2' => $player2,
             ];
 
-        $this->app->db()->insert('results', $data);
+        $this->app->db()->insert('selections', $selection);
         
-        $this->app->redirect('/', ['data' => $data]);
+        $this->app->redirect('/', ['selections' => $selection]);
     }
     
-    public function selectionResults()
+    public function selections()
     {
-            $selections = $this->app->db()->all('results');
-            return $this->app->view('selection-results', ['selections' =>$selections]);
+            $selections = $this->app->db()->all('selections');
+            return $this->app->view('selections', ['selections' =>$selections]);
+            return 'This is the page to show all the selections.';
     }
     public function selection()
     {        
-        $selectionId = $this->app->param('id');    
-          
-        $selection = $this->app->db()->findById('results', $selectionId);
-        if(is_null($selection)) {
-            return $this->app->redirect("/selection-results", ["selectionNotFound" => true]);
-        }
-
+        $id = $this->app->param('id');    
+        $selection = $this->app->db()->findById('selections', $id);
+        
         return $this->app->view('selection', ['selection' => $selection]);
+        
     }
    }

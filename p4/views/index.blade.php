@@ -20,7 +20,7 @@ class="center">
     breed).
    
     <br><br>
-    <h3>The dog breed <a href='/result'> has been CHOSEN in this round to begin agility training.</a></h3>
+    <h3>The dog breed <a href='/selection'> has been CHOSEN in this round to begin agility training.</a></h3>
 
     <br>
     <label for='Rules'>Rules</label>
@@ -51,41 +51,47 @@ class="center">
           </fieldset> 
       </form>
       
-      
-
-      <h3>Click there for a list of  <a href='/results'>all the dogs that began agility training.</a></h3> 
-@if($data)
-<div class='alert alert-success'>
-The dog breed you selected {{ucfirst($data['player1']) }} has been added.
-</div>
-@endif
-@if($app->errorsExist())
+      @if($app->errorsExist())
 <div class='error alert alert-danger'>
 Please make a selection.   
 </div>
+<ul>
+    @foreach($app->errors() as $error)
+    <li class='or'>{{ $error }}</li>
+    @endforeach
+</ul>
+
+@endif 
+
+      <h3>Click there for a list of  <a href='/selections'>all the dogs that began agility training.</a></h3> 
+@if($selection)
+<div class='alert alert-success'>
+The dog breed you selected {{$selection['player1']}} has been added.
+</div>
 @endif
 
 
 
-@if($data)
-<div class="alert alert-{{$data[0]}}">
-<ul>
-<li>Player 2 chose {{ucfirst($data['player2'])}}.</li>
-<li>   
-<li><a href='/results'>All the breeds that began agility training.</a></li>
-   
-@if ($data['winner'] == 1)
-      Hooray! You have a dog to begin agility training!
-      Click to see a list of <a href='/results'>all the dogs that began agility training.</a>
 
-      @else ($data['winner'] == 2)
+@if($selection)
+<div class="alert alert-{{$selection[0]}}">
+<ul>
+<li>Player 2 chose {{$selection['player2']}}.</li>
+<li>   
+<li><a href='/selections'>All the breeds that began agility training.</a></li>
+   
+@if ($selection['winner'] == 0)
+      Hooray! You have a dog to begin agility training!
+      Click to see a list of <a href='/selections'>all the dogs that began agility training.</a>
+
+      @else ($selection['winner'] == 1)
       Sorry, you do not have a dog to begin agility training.
       
-      <br>Click to see a list of  <a href='/results'>all the dogs that began agility training.</a>
+      <br>Click to see a list of  <a href='/selections'>all the dogs that began agility training.</a>
       </div>
 @endif 
   </ul>
 
 @endif 
-<a href='/results'>&larr;Back to the list of Breeds that have started agility training.</a>
+<a href='/selections'>&larr;Back to the list of Breeds that have started agility training.</a>
 @endsection
